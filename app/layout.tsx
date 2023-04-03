@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import "../styles/globals.css";
 
 export const metadata = {
   title: "Galih Family's Blog",
@@ -13,10 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-        <Footer />
+      <body className="mx-auto max-w-2xl px-6">
+        <div>
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
